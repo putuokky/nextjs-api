@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 export default class Home extends Component {
 
   static async getInitialProps() {
-    const getUsers = await fetch('http://localhost:3000/api/users')
+    // const getUsers = await fetch('http://localhost:3000/api/users')
+    const getUsers = await fetch('https://nextjs-api-azure.vercel.app/api/users')
     const dataUsers = await getUsers.json()
     return { users: dataUsers }
   }
